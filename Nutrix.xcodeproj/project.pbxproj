@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */; };
+		14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72325AD2FA700CFB3FF /* loginViewController.swift */; };
+		14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72625AD2FB600CFB3FF /* registerViewController.swift */; };
 		4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300925AD237500AD57BF /* AppDelegate.swift */; };
 		4B25300C25AD237500AD57BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300B25AD237500AD57BF /* ViewController.swift */; };
 		4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300D25AD237500AD57BF /* Experience.rcproject */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		14BEB72325AD2FA700CFB3FF /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
+		14BEB72625AD2FB600CFB3FF /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		4B25300625AD237500AD57BF /* Nutrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300925AD237500AD57BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B25300B25AD237500AD57BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +43,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14BEB72925AD301300CFB3FF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B25300B25AD237500AD57BF /* ViewController.swift */,
+				14BEB72325AD2FA700CFB3FF /* loginViewController.swift */,
+				14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */,
+				14BEB72625AD2FB600CFB3FF /* registerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		4B252FFD25AD237500AD57BF = {
 			isa = PBXGroup;
 			children = (
@@ -57,12 +74,12 @@
 			isa = PBXGroup;
 			children = (
 				4B25300925AD237500AD57BF /* AppDelegate.swift */,
-				4B25300B25AD237500AD57BF /* ViewController.swift */,
 				4B25300D25AD237500AD57BF /* Experience.rcproject */,
 				4B25300F25AD237500AD57BF /* Main.storyboard */,
 				4B25301225AD237700AD57BF /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
 				4B25301725AD237700AD57BF /* Info.plist */,
+				14BEB72925AD301300CFB3FF /* Controllers */,
 			);
 			path = Nutrix;
 			sourceTree = "<group>";
@@ -140,6 +157,9 @@
 				4B25300C25AD237500AD57BF /* ViewController.swift in Sources */,
 				4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */,
 				4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */,
+				14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */,
+				14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */,
+				14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,13 +307,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -306,13 +326,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
