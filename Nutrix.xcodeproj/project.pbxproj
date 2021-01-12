@@ -3,20 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */; };
 		14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72325AD2FA700CFB3FF /* loginViewController.swift */; };
 		14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72625AD2FB600CFB3FF /* registerViewController.swift */; };
+		14BEB78925AD541A00CFB3FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */; };
+		14BEB78C25AD569300CFB3FF /* userViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB78B25AD569300CFB3FF /* userViewController.swift */; };
 		4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300925AD237500AD57BF /* AppDelegate.swift */; };
 		4B25300C25AD237500AD57BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300B25AD237500AD57BF /* ViewController.swift */; };
 		4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300D25AD237500AD57BF /* Experience.rcproject */; };
 		4B25301125AD237500AD57BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25300F25AD237500AD57BF /* Main.storyboard */; };
 		4B25301325AD237700AD57BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301225AD237700AD57BF /* Assets.xcassets */; };
 		4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301425AD237700AD57BF /* LaunchScreen.storyboard */; };
-		4B25302425AD46E100AD57BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B25302325AD46E100AD57BF /* GoogleService-Info.plist */; };
 		54C6C477D4F1A0EA5639207D /* Pods_Nutrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		14BEB72325AD2FA700CFB3FF /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		14BEB72625AD2FB600CFB3FF /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		14BEB78B25AD569300CFB3FF /* userViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userViewController.swift; sourceTree = "<group>"; };
 		1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300625AD237500AD57BF /* Nutrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300925AD237500AD57BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,7 +37,6 @@
 		4B25301225AD237700AD57BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B25301525AD237700AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B25301725AD237700AD57BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B25302325AD46E100AD57BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.release.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +58,6 @@
 				12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */,
 				B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -67,6 +68,7 @@
 				14BEB72325AD2FA700CFB3FF /* loginViewController.swift */,
 				14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */,
 				14BEB72625AD2FB600CFB3FF /* registerViewController.swift */,
+				14BEB78B25AD569300CFB3FF /* userViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -95,9 +97,9 @@
 				4B25300925AD237500AD57BF /* AppDelegate.swift */,
 				4B25300D25AD237500AD57BF /* Experience.rcproject */,
 				4B25300F25AD237500AD57BF /* Main.storyboard */,
+				14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */,
 				4B25301225AD237700AD57BF /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
-				4B25302325AD46E100AD57BF /* GoogleService-Info.plist */,
 				4B25301725AD237700AD57BF /* Info.plist */,
 				14BEB72925AD301300CFB3FF /* Controllers */,
 			);
@@ -173,7 +175,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */,
-				4B25302425AD46E100AD57BF /* GoogleService-Info.plist in Resources */,
+				14BEB78925AD541A00CFB3FF /* GoogleService-Info.plist in Resources */,
 				4B25301325AD237700AD57BF /* Assets.xcassets in Resources */,
 				4B25301125AD237500AD57BF /* Main.storyboard in Resources */,
 			);
@@ -247,6 +249,7 @@
 			files = (
 				4B25300C25AD237500AD57BF /* ViewController.swift in Sources */,
 				4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */,
+				14BEB78C25AD569300CFB3FF /* userViewController.swift in Sources */,
 				4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */,
 				14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */,
 				14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */,
@@ -399,13 +402,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -419,13 +422,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
