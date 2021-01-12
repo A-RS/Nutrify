@@ -16,13 +16,16 @@
 		4B25301125AD237500AD57BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25300F25AD237500AD57BF /* Main.storyboard */; };
 		4B25301325AD237700AD57BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301225AD237700AD57BF /* Assets.xcassets */; };
 		4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301425AD237700AD57BF /* LaunchScreen.storyboard */; };
-		4B25302125AD450E00AD57BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B25302025AD450E00AD57BF /* GoogleService-Info.plist */; };
+		4B25302425AD46E100AD57BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B25302325AD46E100AD57BF /* GoogleService-Info.plist */; };
+		54C6C477D4F1A0EA5639207D /* Pods_Nutrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.debug.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.debug.xcconfig"; sourceTree = "<group>"; };
 		14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		14BEB72325AD2FA700CFB3FF /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		14BEB72625AD2FB600CFB3FF /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
+		1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300625AD237500AD57BF /* Nutrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300925AD237500AD57BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B25300B25AD237500AD57BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +34,8 @@
 		4B25301225AD237700AD57BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B25301525AD237700AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B25301725AD237700AD57BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4B25302025AD450E00AD57BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4B25302325AD46E100AD57BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.release.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,12 +43,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C6C477D4F1A0EA5639207D /* Pods_Nutrix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0893A5020A22AB23A42E0501 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */,
+				B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		14BEB72925AD301300CFB3FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +76,8 @@
 			children = (
 				4B25300825AD237500AD57BF /* Nutrix */,
 				4B25300725AD237500AD57BF /* Products */,
+				0893A5020A22AB23A42E0501 /* Pods */,
+				6BE338D0593C883E97672200 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,11 +97,19 @@
 				4B25300F25AD237500AD57BF /* Main.storyboard */,
 				4B25301225AD237700AD57BF /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
+				4B25302325AD46E100AD57BF /* GoogleService-Info.plist */,
 				4B25301725AD237700AD57BF /* Info.plist */,
-				4B25302025AD450E00AD57BF /* GoogleService-Info.plist */,
 				14BEB72925AD301300CFB3FF /* Controllers */,
 			);
 			path = Nutrix;
+			sourceTree = "<group>";
+		};
+		6BE338D0593C883E97672200 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B25301A25AD237700AD57BF /* Build configuration list for PBXNativeTarget "Nutrix" */;
 			buildPhases = (
+				5E82813689FB40B56F0E7A5D /* [CP] Check Pods Manifest.lock */,
 				4B25300225AD237500AD57BF /* Sources */,
 				4B25300325AD237500AD57BF /* Frameworks */,
 				4B25300425AD237500AD57BF /* Resources */,
+				627A66257E00B967EC25F1DE /* [CP] Embed Pods Frameworks */,
+				102D9A0B56B56331AFBFAA15 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -145,13 +173,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */,
-				4B25302125AD450E00AD57BF /* GoogleService-Info.plist in Resources */,
+				4B25302425AD46E100AD57BF /* GoogleService-Info.plist in Resources */,
 				4B25301325AD237700AD57BF /* Assets.xcassets in Resources */,
 				4B25301125AD237500AD57BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		102D9A0B56B56331AFBFAA15 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E82813689FB40B56F0E7A5D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nutrix-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		627A66257E00B967EC25F1DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nutrix/Pods-Nutrix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B25300225AD237500AD57BF /* Sources */ = {
@@ -307,6 +394,7 @@
 		};
 		4B25301B25AD237700AD57BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -326,6 +414,7 @@
 		};
 		4B25301C25AD237700AD57BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
