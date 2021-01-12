@@ -16,6 +16,7 @@
 		4B25301125AD237500AD57BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25300F25AD237500AD57BF /* Main.storyboard */; };
 		4B25301325AD237700AD57BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301225AD237700AD57BF /* Assets.xcassets */; };
 		4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301425AD237700AD57BF /* LaunchScreen.storyboard */; };
+		4B25302125AD450E00AD57BF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B25302025AD450E00AD57BF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		4B25301225AD237700AD57BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B25301525AD237700AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B25301725AD237700AD57BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B25302025AD450E00AD57BF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				4B25301225AD237700AD57BF /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
 				4B25301725AD237700AD57BF /* Info.plist */,
+				4B25302025AD450E00AD57BF /* GoogleService-Info.plist */,
 				14BEB72925AD301300CFB3FF /* Controllers */,
 			);
 			path = Nutrix;
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */,
+				4B25302125AD450E00AD57BF /* GoogleService-Info.plist in Resources */,
 				4B25301325AD237700AD57BF /* Assets.xcassets in Resources */,
 				4B25301125AD237500AD57BF /* Main.storyboard in Resources */,
 			);
@@ -307,13 +311,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9HD8W566RB;
+				DEVELOPMENT_TEAM = A9H3ZUZBG6;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,13 +330,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9HD8W566RB;
+				DEVELOPMENT_TEAM = A9H3ZUZBG6;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
