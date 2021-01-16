@@ -10,6 +10,7 @@ import GoogleSignIn
 import Firebase
 import AuthenticationServices
 import Alamofire
+import SwiftyJSON
 
 class userViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     let db = Firestore.firestore()
@@ -17,7 +18,11 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var email: String!
     var username: String!
     
+    var foodItems: [String] = ["banana", "apple", "bread", "pasta"]
+    
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var foodLabels: UILabel!
     
     var imagePicker = UIImagePickerController()
     
@@ -85,7 +90,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         getFoodLabel(with: strBase64)
     }
     
-    func getFoodLabel(with imageStrBase64: String) {
+    func getFoodLabel(with imageStrBase64: String){
         //define API url
 //        let url = URL(string: "http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getFoodLabels")!
 //
@@ -107,11 +112,31 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 //
 //        task.resume()
         
-        AF.request("http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getFoodLabels", method: .post, parameters: parameters, encoding: JSONEncoding.default).response {_ in
-            
+        AF.request("http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getFoodLabels", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseData {response in
+            if let json = response.data {
+                do{
+                    let data = try JSON(data: json)
+                    print(data)
+                    let convertedString = String(data: response.data!, encoding: String.Encoding.utf8)
+                    //let locationJSON = data["addresses"][0]["formattedAddress"]
+                    //print("location: \(location)")
+                    for item1 in data{
+                        print(item1)
+                        for item2 in self.foodItems{
+                            if "\(item1)".contains(item2){
+                                print(item2)
+                                self.foodLabels.text = "\(item2)"
+                            }
+                        }
+                    }
+                    //self.location = self.locationField.text
+                }
+                catch{
+                    print("JSON Error")
+                }
         }
     }
-    
+    }
 }
 
 extension UIImage {
