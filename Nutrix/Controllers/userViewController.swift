@@ -18,7 +18,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var email: String!
     var username: String!
     
-    var foodItems: [String] = ["banana", "apple", "bread", "pasta"]
+    var foodItems: [String] = ["banana", "apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -28,7 +28,6 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var imageTaken: UIImage!
     
-    @IBOutlet weak var welcomeUsername: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +55,6 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 }
             }
             
-            welcomeUsername.text = "Welcome back! \(username!)"
         }
     }
     
@@ -91,26 +89,11 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     func getFoodLabel(with imageStrBase64: String){
-        //define API url
-//        let url = URL(string: "http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getFoodLabels")!
-//
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
         
         let parameters: [String: Any] = [
             "image": imageStrBase64
         ]
 
-//        request.httpBody = try! JSONSerialization.data(withJSONObject: parameters)
-//
-//        let task = URLSession.shared.dataTask(with: request, completionHandler: { data, response, error in
-//
-//            guard let data = data else {
-//                return
-//            }
-//        })
-//
-//        task.resume()
         
         AF.request("http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getFoodLabels", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseData {response in
             if let json = response.data {
@@ -124,8 +107,8 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                         print(item1)
                         for item2 in self.foodItems{
                             if "\(item1)".contains(item2){
-                                print(item2)
-                                self.foodLabels.text = "\(item2)"
+                                print("\(item2)")
+                                self.saveToDatabase(withIngredient: item2)
                             }
                         }
                     }
@@ -134,19 +117,41 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 catch{
                     print("JSON Error")
                 }
+            }
         }
     }
-    }
     
+    func saveToDatabase(withIngredient ingredient: String) {
+        var ref: DocumentReference? = nil
+        
+        ref = db.collection("Ingredients").addDocument(data:
+            ["name": ingredient,
+             "username": username!,
+             "email": email!,
+             "quantity": 1
+            ]
+        )
+        { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+        
+        performSegue(withIdentifier: "homeToCooking", sender: self)
+        
+    }
     
     @IBAction func cookingAction(_ sender: UIButton) {
         performSegue(withIdentifier: "homeToCooking", sender: self)
     }
     
-    
-    @IBAction func envAction(_ sender: UIButton) {
+
+    @IBAction func homeToEnv(_ sender: UIButton) {
         performSegue(withIdentifier: "homeToEnv", sender: self)
     }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let uvCooking = segue.destination as? cookingViewController{
