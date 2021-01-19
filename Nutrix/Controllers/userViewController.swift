@@ -18,6 +18,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var email: String!
     var username: String!
     
+    
     var foodItems: [String] = ["banana", "apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
     
     @IBOutlet weak var imageView: UIImageView!
