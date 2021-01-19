@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14851A6825B660DC001E9334 /* cookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14851A6725B660DC001E9334 /* cookingViewController.swift */; };
+		14851A6B25B660F3001E9334 /* enviromentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14851A6A25B660F3001E9334 /* enviromentViewController.swift */; };
 		14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */; };
 		14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72325AD2FA700CFB3FF /* loginViewController.swift */; };
 		14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB72625AD2FB600CFB3FF /* registerViewController.swift */; };
@@ -23,6 +25,8 @@
 
 /* Begin PBXFileReference section */
 		12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.debug.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.debug.xcconfig"; sourceTree = "<group>"; };
+		14851A6725B660DC001E9334 /* cookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingViewController.swift; sourceTree = "<group>"; };
+		14851A6A25B660F3001E9334 /* enviromentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enviromentViewController.swift; sourceTree = "<group>"; };
 		14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		14BEB72325AD2FA700CFB3FF /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		14BEB72625AD2FB600CFB3FF /* registerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 				14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */,
 				14BEB72625AD2FB600CFB3FF /* registerViewController.swift */,
 				14BEB78B25AD569300CFB3FF /* userViewController.swift */,
+				14851A6725B660DC001E9334 /* cookingViewController.swift */,
+				14851A6A25B660F3001E9334 /* enviromentViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +260,8 @@
 				14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */,
 				14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */,
 				14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */,
+				14851A6825B660DC001E9334 /* cookingViewController.swift in Sources */,
+				14851A6B25B660F3001E9334 /* enviromentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

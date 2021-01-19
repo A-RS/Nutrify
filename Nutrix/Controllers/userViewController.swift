@@ -137,6 +137,28 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     }
+    
+    
+    @IBAction func cookingAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "homeToCooking", sender: self)
+    }
+    
+    
+    @IBAction func envAction(_ sender: UIButton) {
+        performSegue(withIdentifier: "homeToEnv", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let uvCooking = segue.destination as? cookingViewController{
+            uvCooking.email = self.email
+            uvCooking.username = self.username
+        }
+        else if let uvEnv = segue.destination as? enviromentViewController{
+            uvEnv.email = self.email
+            uvEnv.username = self.username
+        }
+        
+    }
 }
 
 extension UIImage {
