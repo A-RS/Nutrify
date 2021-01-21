@@ -272,12 +272,14 @@
                                 <rect key="frame" x="0.0" y="124" width="375" height="418"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.60000002384185791" tag="58" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sb-Bd-uEb">
-                                <rect key="frame" x="121" y="550" width="133" height="44"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="24"/>
-                                <state key="normal" title="Take Image">
+                            <button opaque="NO" alpha="0.60000002384185791" tag="58" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Sb-Bd-uEb">
+                                <rect key="frame" x="163" y="517" width="61" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.40000000000000002" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" image="camera.metering.partial" catalog="system">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="black"/>
                                 </state>
                                 <connections>
                                     <action selector="takeImage:" destination="tji-z7-zPx" eventType="touchUpInside" id="ETb-Kq-2ww"/>
@@ -307,17 +309,52 @@
                                     <action selector="homeToEnv:" destination="tji-z7-zPx" eventType="touchUpInside" id="kLX-Af-9eI"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-IC-Pu8">
+                                <rect key="frame" x="8" y="6" width="351" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Ingredients:	</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-UT-pgh">
+                                <rect key="frame" x="8" y="102" width="295" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Title:	</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Servings: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17S-7f-MJR">
+                                <rect key="frame" x="8" y="180" width="295" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-Bn-wlJ">
+                                <rect key="frame" x="8" y="254" width="295" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFM-66-ixn">
+                                <rect key="frame" x="237" y="563" width="122" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Generate Recipes"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lb5-MD-CRB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Lb5-MD-CRB" firstAttribute="trailing" secondItem="3Sb-Bd-uEb" secondAttribute="trailing" constant="121" id="3dT-cc-yON"/>
-                            <constraint firstItem="3Sb-Bd-uEb" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" constant="121" id="E11-JQ-VjC"/>
-                            <constraint firstItem="Lb5-MD-CRB" firstAttribute="bottom" secondItem="3Sb-Bd-uEb" secondAttribute="bottom" constant="30" id="b4H-Ln-wsb"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="Xxm-44-X4a" id="aen-bT-eHX"/>
+                        <outlet property="ingrediantLabel" destination="Uz3-IC-Pu8" id="MHS-6h-21n"/>
+                        <outlet property="instructionLabel" destination="ZKU-Bn-wlJ" id="uC0-WB-wuy"/>
+                        <outlet property="servingLabel" destination="17S-7f-MJR" id="gJC-Ex-ds1"/>
+                        <outlet property="titleLabel" destination="5d1-UT-pgh" id="klQ-G0-oRN"/>
                         <segue destination="FFx-j9-4rv" kind="presentation" identifier="homeToCooking" id="R0P-9i-dZn"/>
                         <segue destination="D5D-7z-IKI" kind="presentation" identifier="homeToEnv" id="uaR-wX-fAV"/>
                     </connections>
@@ -346,13 +383,8 @@
                                 <rect key="frame" x="829" y="519" width="54" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-up-lhW">
-                                <rect key="frame" x="157" y="570" width="61" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cooking"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nxb-90-FEz">
-                                <rect key="frame" x="294" y="578" width="65" height="53"/>
+                                <rect key="frame" x="294" y="594" width="65" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="tree"/>
                                 <connections>
@@ -360,7 +392,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Luv-n0-q6K">
-                                <rect key="frame" x="16" y="573" width="53" height="58"/>
+                                <rect key="frame" x="26" y="594" width="53" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="image.ong"/>
                                 <connections>
@@ -382,6 +414,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-up-lhW">
+                                <rect key="frame" x="157" y="593" width="61" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cooking"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fqL-xb-ZJ8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -412,24 +449,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3eV-RF-0et">
-                                <rect key="frame" x="293" y="580" width="65" height="53"/>
+                                <rect key="frame" x="294" y="597" width="65" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="tree"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5C-tm-EA6">
-                                <rect key="frame" x="15" y="577" width="53" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="image.ong"/>
-                                <connections>
-                                    <action selector="homeAction:" destination="D5D-7z-IKI" eventType="touchUpInside" id="52H-g9-siU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6R-Cm-Hde">
-                                <rect key="frame" x="155" y="577" width="61" height="61"/>
+                                <rect key="frame" x="157" y="597" width="61" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="cooking"/>
                                 <connections>
                                     <action selector="cookingAction:" destination="D5D-7z-IKI" eventType="touchUpInside" id="XPB-sp-h8i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5C-tm-EA6">
+                                <rect key="frame" x="16" y="600" width="53" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="image.ong"/>
+                                <connections>
+                                    <action selector="homeAction:" destination="D5D-7z-IKI" eventType="touchUpInside" id="52H-g9-siU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -447,13 +484,14 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QVz-2Q-q1S"/>
-        <segue reference="p1s-Fv-XQM"/>
+        <segue reference="uaR-wX-fAV"/>
+        <segue reference="R0P-9i-dZn"/>
         <segue reference="rAd-6c-Vun"/>
         <segue reference="cBe-pa-Yo0"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
+        <image name="camera.metering.partial" catalog="system" width="128" height="93"/>
         <image name="checkmark.shield.fill" catalog="system" width="128" height="118"/>
         <image name="cooking" width="452" height="452"/>
         <image name="image.ong" width="200" height="200"/>

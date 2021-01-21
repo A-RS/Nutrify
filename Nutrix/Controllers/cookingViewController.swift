@@ -66,7 +66,6 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
                         if  document.data()["username"] as? String == username{
                             let name = document.data()["name"]! as? String
                             
-                            print("hello")
                             self.ingredients.append(name!)
                             self.foodTable.reloadData()
                         }
@@ -81,7 +80,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         let foodItem = ingredients[indexPath.row]
         currentCell = foodTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? foodLabel
         
-        currentCell.ingredientField.text = "Food item: \(foodItem)"
+        currentCell.ingredientField.text = "\(foodItem)"
         
         return currentCell
     }

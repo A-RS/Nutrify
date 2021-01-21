@@ -19,7 +19,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var username: String!
     
     
-    var foodItems: [String] = ["banana", "apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
+    var foodItems: [String] = ["banana", "Apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
     
     @IBOutlet weak var imageView: UIImageView!
     
@@ -29,12 +29,24 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var imageTaken: UIImage!
     
+    var inString: String! = ""
+    
+    
+    @IBOutlet weak var ingrediantLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var servingLabel: UILabel!
+    @IBOutlet weak var instructionLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lookUpUsername()
         imageView.isHidden = false
         imagePicker.delegate = self
+        ingrediantLabel.isHidden = true
+        titleLabel.isHidden = true
+        servingLabel.isHidden = true
+        instructionLabel.isHidden = true
     }
     
     @IBAction func takeImage(_ sender: UIButton) {
@@ -122,6 +134,47 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
+    func getRecipe(with ingrediants: String){
+        let parameters: [String: Any] = [
+            "ingredients": ingrediants
+        ]
+
+        
+        AF.request("http://ec2-54-90-166-180.compute-1.amazonaws.com:5000/getRecipe", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseData {response in
+            if let json = response.data {
+                do{
+                    let data = try JSON(data: json)
+                    print(data[0])
+                    let convertedString = String(data: response.data!, encoding: String.Encoding.utf8)
+                }
+                catch{
+                    print("JSON Error")
+                }
+            }
+        }
+    }
+    
+    func lookUpIngrediants() {
+        db.collection("Ingredients").getDocuments() { [self] (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    //print("\(document.documentID) => \(document.data())")
+                    
+                    DispatchQueue.main.async {
+                        //
+                        if  document.data()["username"] as? String == username{
+                            let name = document.data()["name"]! as? String
+                            inString  = inString + " " + name!
+                        }
+                    }
+                }
+                getRecipe(with: inString)
+            }
+        }
+    }
+    
     func saveToDatabase(withIngredient ingredient: String) {
         var ref: DocumentReference? = nil
         
@@ -151,6 +204,11 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 
     @IBAction func homeToEnv(_ sender: UIButton) {
         performSegue(withIdentifier: "homeToEnv", sender: self)
+    }
+    
+    
+    @IBAction func generateRecipes(_ sender: Any) {
+        lookUpIngrediants()
     }
     
     
