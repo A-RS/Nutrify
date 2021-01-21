@@ -22,6 +22,8 @@ class homeViewController: UIViewController {
         self.performSegue(withIdentifier: "loginSegue", sender: self)
     }
     
+    @IBAction func generateRecipe(_ sender: UIButton) {
+    }
     
     @IBAction func registerAction(_ sender: UIButton) {
         self.performSegue(withIdentifier: "registerSegue", sender: self)

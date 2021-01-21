@@ -134,9 +134,10 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
     }
     
-    func getRecipe(with ingrediants: String){
+    func getRecipe(){
+        print(inString!)
         let parameters: [String: Any] = [
-            "ingredients": ingrediants
+            "ingredients": "tasty " + inString!
         ]
 
         
@@ -144,7 +145,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
             if let json = response.data {
                 do{
                     let data = try JSON(data: json)
-                    print(data[0])
+                    print(data)
                     let convertedString = String(data: response.data!, encoding: String.Encoding.utf8)
                 }
                 catch{
@@ -162,15 +163,13 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                 for document in querySnapshot!.documents {
                     //print("\(document.documentID) => \(document.data())")
                     
-                    DispatchQueue.main.async {
-                        //
-                        if  document.data()["username"] as? String == username{
-                            let name = document.data()["name"]! as? String
-                            inString  = inString + " " + name!
-                        }
+                    if  document.data()["username"] as? String == username{
+                        let name = document.data()["name"]! as? String
+                        inString  = inString + " " + name!
                     }
                 }
-                getRecipe(with: inString)
+                print(inString!)
+                getRecipe()
             }
         }
     }
@@ -207,7 +206,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     }
     
     
-    @IBAction func generateRecipes(_ sender: Any) {
+    @IBAction func generateRecipe(_ sender: UIButton) {
         lookUpIngrediants()
     }
     
