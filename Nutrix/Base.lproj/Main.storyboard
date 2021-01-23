@@ -300,52 +300,11 @@
                                 <color key="shadowColor" red="0.1137254902" green="0.26274509800000001" blue="0.49019607840000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-4o-ldc">
-                                <rect key="frame" x="0.0" y="110" width="375" height="66"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efi-4U-57s">
-                                        <rect key="frame" x="0.0" y="0.0" width="135" height="35.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" systemColor="systemYellowColor"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpM-jZ-aMG">
-                                        <rect key="frame" x="0.0" y="43.5" width="112" height="22.5"/>
-                                        <string key="text">Ingredients:	</string>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="GpM-jZ-aMG" firstAttribute="top" secondItem="efi-4U-57s" secondAttribute="bottom" id="D3P-0S-IkP"/>
-                                    <constraint firstItem="GpM-jZ-aMG" firstAttribute="top" secondItem="efi-4U-57s" secondAttribute="bottom" constant="8" symbolic="YES" id="ZfV-2L-be6"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J0U-4o-ldc">
+                                <rect key="frame" x="0.0" y="110" width="375" height="30"/>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oG0-Cr-pl4">
-                                <rect key="frame" x="0.0" y="295" width="375" height="66"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cF-0j-XaY">
-                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="35.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" systemColor="systemYellowColor"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvp-jK-5V4">
-                                        <rect key="frame" x="0.0" y="43.5" width="76.5" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="zvp-jK-5V4" firstAttribute="top" secondItem="1cF-0j-XaY" secondAttribute="bottom" id="7ed-cO-yw5"/>
-                                    <constraint firstItem="zvp-jK-5V4" firstAttribute="top" secondItem="1cF-0j-XaY" secondAttribute="bottom" id="QQw-Ks-LIC"/>
-                                </constraints>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oG0-Cr-pl4">
+                                <rect key="frame" x="0.0" y="295" width="375" height="22.5"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-h4-wS2">
                                 <rect key="frame" x="294" y="609" width="65" height="53"/>
@@ -382,33 +341,37 @@
                                 <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="0Bt-Q5-Ecg">
-                                <rect key="frame" x="0.0" y="370" width="375" height="58"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="560-Dl-OGH">
-                                        <rect key="frame" x="0.0" y="0.0" width="135.5" height="35.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <color key="shadowColor" systemColor="systemYellowColor"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZSB-Xp-2ts">
-                                        <rect key="frame" x="0.0" y="35.5" width="96" height="22.5"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ZSB-Xp-2ts" firstAttribute="top" secondItem="560-Dl-OGH" secondAttribute="bottom" id="cVl-PG-RtZ"/>
-                                    <constraint firstItem="ZSB-Xp-2ts" firstAttribute="top" secondItem="560-Dl-OGH" secondAttribute="bottom" id="hkz-2p-P35"/>
-                                </constraints>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="URS-ZS-T8X">
-                                <rect key="frame" x="4" y="110" width="365" height="427"/>
+                                <rect key="frame" x="4" y="436" width="365" height="101"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rMy-iM-t6h">
+                                <rect key="frame" x="124" y="223" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Serving"/>
+                                <connections>
+                                    <action selector="showServing:" destination="tji-z7-zPx" eventType="touchUpInside" id="DMs-gl-NP0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IAT-E9-uin">
+                                <rect key="frame" x="124" y="305" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Instructions"/>
+                                <connections>
+                                    <action selector="showInstructions:" destination="tji-z7-zPx" eventType="touchUpInside" id="ihP-cw-9ub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RWa-0t-lja">
+                                <rect key="frame" x="124" y="138" width="92" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Ingredients"/>
+                                <connections>
+                                    <action selector="showIngredients:" destination="tji-z7-zPx" eventType="touchUpInside" id="62r-15-En6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lb5-MD-CRB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -416,9 +379,6 @@
                             <constraint firstItem="J0U-4o-ldc" firstAttribute="top" secondItem="Lb5-MD-CRB" secondAttribute="top" constant="110" id="89r-mH-ZV7"/>
                             <constraint firstItem="oG0-Cr-pl4" firstAttribute="top" secondItem="Lb5-MD-CRB" secondAttribute="top" constant="295" id="QwX-Dd-quT"/>
                             <constraint firstItem="Lb5-MD-CRB" firstAttribute="trailing" secondItem="oG0-Cr-pl4" secondAttribute="trailing" id="S6Y-V7-bTI"/>
-                            <constraint firstItem="Lb5-MD-CRB" firstAttribute="trailing" secondItem="0Bt-Q5-Ecg" secondAttribute="trailing" id="d9M-Hh-ZP5"/>
-                            <constraint firstItem="0Bt-Q5-Ecg" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" id="duQ-7b-rUe"/>
-                            <constraint firstItem="0Bt-Q5-Ecg" firstAttribute="top" secondItem="Lb5-MD-CRB" secondAttribute="top" constant="370" id="hQQ-j7-Yaa"/>
                             <constraint firstItem="Lb5-MD-CRB" firstAttribute="trailing" secondItem="J0U-4o-ldc" secondAttribute="trailing" id="hVc-U4-3Nq"/>
                             <constraint firstItem="oG0-Cr-pl4" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" id="tgx-9f-u8a"/>
                             <constraint firstItem="J0U-4o-ldc" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" id="umB-wR-cJT"/>
@@ -429,12 +389,6 @@
                         <outlet property="cameraBtn" destination="3Sb-Bd-uEb" id="T9f-La-Uya"/>
                         <outlet property="generateBtn" destination="cFM-66-ixn" id="w6u-Kd-f7A"/>
                         <outlet property="imageView" destination="URS-ZS-T8X" id="Bwt-km-bRc"/>
-                        <outlet property="ingredientHeader" destination="efi-4U-57s" id="tf9-eq-sXK"/>
-                        <outlet property="ingredientLabel" destination="GpM-jZ-aMG" id="QTX-9v-nvD"/>
-                        <outlet property="instructionHeader" destination="560-Dl-OGH" id="ls2-7b-usH"/>
-                        <outlet property="instructionLabel" destination="ZSB-Xp-2ts" id="S51-PU-L7A"/>
-                        <outlet property="servingHeader" destination="1cF-0j-XaY" id="9l5-TU-7va"/>
-                        <outlet property="servingLabel" destination="zvp-jK-5V4" id="dps-MJ-tyX"/>
                         <outlet property="titleLabel" destination="5d1-UT-pgh" id="klQ-G0-oRN"/>
                         <segue destination="FFx-j9-4rv" kind="presentation" identifier="homeToCooking" id="R0P-9i-dZn"/>
                         <segue destination="D5D-7z-IKI" kind="presentation" identifier="homeToEnv" id="uaR-wX-fAV"/>
@@ -580,9 +534,6 @@
         <image name="tree" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

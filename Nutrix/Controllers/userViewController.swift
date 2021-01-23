@@ -32,15 +32,12 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var inString: String! = ""
     
-    
+    var ingredients: String!
+    var servings: String!
+    var instructions: String!
     
     @IBOutlet weak var titleLabel: UILabel?
-    @IBOutlet weak var ingredientLabel: UILabel!
-    @IBOutlet weak var servingLabel: UILabel!
-    @IBOutlet weak var instructionLabel: UILabel!
-    @IBOutlet weak var instructionHeader: UILabel!
-    @IBOutlet weak var ingredientHeader: UILabel!
-    @IBOutlet weak var servingHeader: UILabel!
+    
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -48,13 +45,8 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         lookUpUsername()
         imageView.isHidden = false
         imagePicker.delegate = self
-        ingredientLabel.isHidden = true
         titleLabel!.isHidden = true
-        servingLabel.isHidden = true
-        instructionLabel.isHidden = true
-        instructionHeader.isHidden = true
-        ingredientHeader.isHidden = true
-        servingHeader.isHidden = true
+        
     }
     
     @IBAction func takeImage(_ sender: UIButton) {
@@ -157,16 +149,10 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     let convertedString = String(data: response.data!, encoding: String.Encoding.utf8)
                     self.titleLabel?.isHidden = false
                     self.titleLabel?.text = "\(data[0])"
-                    self.instructionLabel.isHidden = false
-                    self.servingLabel.isHidden = false
-                    self.servingLabel.text = "\(data[2])"
-                    self.ingredientLabel.isHidden = false
-                    self.instructionLabel.text = "\(data[4])"
+                    
                     self.generateBtn.isHidden = true
                     self.cameraBtn.isHidden = true
-                    self.instructionHeader.isHidden = false
-                    self.ingredientHeader.isHidden = false
-                    self.servingHeader.isHidden = false
+                    
                     //self.ingrediantLabel.isHidden = false
                     //self.ingrediantLabel.text = "\(data[3])"
                     //print(data[3][0]) // Hello
@@ -174,8 +160,11 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     for n in 0...data.count{
                         ingLabel = ingLabel + "\(data[3][n])" + "\n"
                     }
-                    self.ingredientLabel.text = ingLabel
-                    print(self.ingredientLabel.text)
+                    
+                    self.ingredients = ingLabel
+                    self.servings = "\(data[2])"
+                    self.instructions = "\(data[4])"
+                    
                     
                 }
                 catch{
@@ -252,6 +241,51 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         }
         
     }
+    
+    @IBAction func showIngredients(_ sender: Any) {
+        let alertController = UIAlertController(title: "Ingredients", message:
+                ingredients, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func showInstructions(_ sender: Any) {
+        let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
+
+        paragraphStyle.alignment = NSTextAlignment.left
+
+        let messageText = NSMutableAttributedString(
+            string: instructions,
+            attributes: [
+                NSAttributedString.Key.paragraphStyle: paragraphStyle,
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 12),
+                //NSAttributedString.Key.foregroundColor: UIColor.gray
+            ]
+        )
+        
+        let alertController = UIAlertController(title: "Instructions", message:
+                instructions, preferredStyle: .alert)
+        
+        alertController.setValue(messageText, forKey: "attributedMessage")
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+        
+        self.present(alertController, animated: true, completion: nil)
+        
+        
+    }
+    
+    @IBAction func showServing(_ sender: Any) {
+        let alertController = UIAlertController(title: "Servings", message:
+                servings, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+            self.present(alertController, animated: true, completion: nil)
+    }
+    
+    
+    
 }
 
 extension UIImage {
