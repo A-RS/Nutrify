@@ -12,7 +12,7 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 
-class userViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate{
+class userViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     let db = Firestore.firestore()
     
     var email: String!
@@ -35,12 +35,11 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var inString: String! = ""
     
     
-    
-    
     @IBOutlet weak var ingrediantLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var servingLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
+    
     
     
     override func viewDidLoad() {
@@ -52,6 +51,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         titleLabel!.isHidden = true
         servingLabel.isHidden = true
         instructionLabel.isHidden = true
+        
     }
     
     @IBAction func takeImage(_ sender: UIButton) {

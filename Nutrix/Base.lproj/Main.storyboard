@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="seJ-qq-tVi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="seJ-qq-tVi">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -285,41 +285,6 @@
                                     <action selector="takeImage:" destination="tji-z7-zPx" eventType="touchUpInside" id="ETb-Kq-2ww"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqA-SA-ZiP">
-                                <rect key="frame" x="16" y="598" width="53" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="image.ong"/>
-                                <connections>
-                                    <action selector="homeAction:" destination="tji-z7-zPx" eventType="touchUpInside" id="kGJ-m5-ufK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujE-GV-44Z">
-                                <rect key="frame" x="156" y="598" width="61" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="cooking"/>
-                                <connections>
-                                    <action selector="cookingAction:" destination="tji-z7-zPx" eventType="touchUpInside" id="Fuq-CD-9ha"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-h4-wS2">
-                                <rect key="frame" x="294" y="601" width="65" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="tree"/>
-                                <connections>
-                                    <action selector="homeToEnv:" destination="tji-z7-zPx" eventType="touchUpInside" id="kLX-Af-9eI"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-UT-pgh">
-                                <rect key="frame" x="31" y="59" width="295" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.57448580540000005" green="1" blue="0.5366667597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <string key="text">Title:	</string>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
-                                <color key="textColor" systemColor="systemIndigoColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <size key="shadowOffset" width="0.0" height="1"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFM-66-ixn">
                                 <rect key="frame" x="237" y="563" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -329,53 +294,97 @@
                                     <action selector="generateRecipe:" destination="tji-z7-zPx" eventType="touchUpInside" id="syE-58-kKJ"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal of the Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-Fc-oez">
-                                <rect key="frame" x="102" y="15" width="202" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal of the Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbH-Fc-oez">
+                                <rect key="frame" x="0.0" y="10" width="375" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="WpI-RH-SwV"/>
+                                    <constraint firstAttribute="width" constant="375" id="io3-M9-NBs"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="systemYellowColor"/>
                                 <size key="shadowOffset" width="0.0" height="5"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CW3-ov-ShF">
-                                <rect key="frame" x="-1" y="163" width="376" height="229"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fWF-4J-V9q">
+                                <rect key="frame" x="-21" y="117" width="396" height="419"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-IC-Pu8">
-                                        <rect key="frame" x="19" y="0.0" width="310" height="22.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uz3-IC-Pu8">
+                                        <rect key="frame" x="21" y="20" width="375" height="115"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <string key="text">Ingredients:	</string>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Instructions: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-Bn-wlJ">
-                                        <rect key="frame" x="19" y="59" width="295" height="22.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Instructions: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-Bn-wlJ">
+                                        <rect key="frame" x="20" y="163" width="375" height="124"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Servings: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17S-7f-MJR">
-                                        <rect key="frame" x="19" y="125" width="295" height="22.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Servings: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17S-7f-MJR">
+                                        <rect key="frame" x="21" y="333" width="375" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="17S-7f-MJR" firstAttribute="top" secondItem="ZKU-Bn-wlJ" secondAttribute="bottom" constant="43.5" id="Ft3-Ni-mba"/>
-                                    <constraint firstAttribute="bottom" secondItem="17S-7f-MJR" secondAttribute="bottom" id="QIC-8k-7ZK"/>
-                                    <constraint firstItem="17S-7f-MJR" firstAttribute="top" secondItem="ZKU-Bn-wlJ" secondAttribute="bottom" constant="43.5" id="SCJ-iV-6qS"/>
-                                    <constraint firstItem="ZKU-Bn-wlJ" firstAttribute="top" secondItem="Uz3-IC-Pu8" secondAttribute="bottom" constant="36.5" id="a33-59-n9F"/>
-                                    <constraint firstItem="Uz3-IC-Pu8" firstAttribute="top" secondItem="CW3-ov-ShF" secondAttribute="top" id="ff2-oH-JhH"/>
-                                    <constraint firstItem="Uz3-IC-Pu8" firstAttribute="top" secondItem="CW3-ov-ShF" secondAttribute="top" id="hVL-Df-kG0"/>
-                                    <constraint firstItem="ZKU-Bn-wlJ" firstAttribute="top" secondItem="Uz3-IC-Pu8" secondAttribute="bottom" constant="36.5" id="woC-mQ-ft0"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="G6k-ux-IDr"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="PRQ-jv-VlJ"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="0O8-xb-ynv"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="bvu-1H-J6G"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5d1-UT-pgh">
+                                <rect key="frame" x="0.0" y="91" width="375" height="29"/>
+                                <color key="tintColor" red="0.57448580540000005" green="1" blue="0.5366667597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="FpW-tV-hba"/>
+                                    <constraint firstAttribute="height" constant="29" id="dba-fn-hgw"/>
+                                </constraints>
+                                <string key="text">Title:	</string>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="27"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEL-h4-wS2">
+                                <rect key="frame" x="294" y="609" width="65" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="tree"/>
+                                <connections>
+                                    <action selector="homeToEnv:" destination="tji-z7-zPx" eventType="touchUpInside" id="kLX-Af-9eI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqA-SA-ZiP">
+                                <rect key="frame" x="16" y="604" width="53" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="image.ong"/>
+                                <connections>
+                                    <action selector="homeAction:" destination="tji-z7-zPx" eventType="touchUpInside" id="kGJ-m5-ufK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ujE-GV-44Z">
+                                <rect key="frame" x="164" y="601" width="45" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cooking"/>
+                                <connections>
+                                    <action selector="cookingAction:" destination="tji-z7-zPx" eventType="touchUpInside" id="Fuq-CD-9ha"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Lb5-MD-CRB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lb5-MD-CRB" firstAttribute="trailing" secondItem="5d1-UT-pgh" secondAttribute="trailing" id="1Ph-xY-xRf"/>
+                            <constraint firstItem="fbH-Fc-oez" firstAttribute="top" secondItem="Lb5-MD-CRB" secondAttribute="top" constant="10" id="1YQ-bb-0Q5"/>
+                            <constraint firstAttribute="trailing" secondItem="fbH-Fc-oez" secondAttribute="trailing" id="DUp-c5-IFO"/>
+                            <constraint firstItem="5d1-UT-pgh" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" id="Pf9-I8-nV6"/>
+                            <constraint firstItem="5d1-UT-pgh" firstAttribute="top" secondItem="fbH-Fc-oez" secondAttribute="bottom" constant="30" id="co6-7b-fco"/>
+                            <constraint firstItem="fbH-Fc-oez" firstAttribute="leading" secondItem="Lb5-MD-CRB" secondAttribute="leading" id="pVp-Yo-IHJ"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -392,7 +401,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cgn-oR-uBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="373.60000000000002" y="-581.55922038980509"/>
+            <point key="canvasLocation" x="372" y="-582.45877061469275"/>
         </scene>
         <!--Cooking View Controller-->
         <scene sceneID="xJU-HW-Kwe">
@@ -517,7 +526,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="uaR-wX-fAV"/>
         <segue reference="R0P-9i-dZn"/>
-        <segue reference="rAd-6c-Vun"/>
+        <segue reference="G01-79-GAd"/>
         <segue reference="ifQ-3m-Koo"/>
     </inferredMetricsTieBreakers>
     <resources>
