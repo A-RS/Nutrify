@@ -24,8 +24,6 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var foodItems: [String] = ["banana", "Apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
     
-    @IBOutlet weak var imageView: UIImageView!
-    
     @IBOutlet weak var foodLabels: UILabel!
     
     var imagePicker = UIImagePickerController()
@@ -35,23 +33,28 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var inString: String! = ""
     
     
-    @IBOutlet weak var ingrediantLabel: UILabel!
+    
     @IBOutlet weak var titleLabel: UILabel?
+    @IBOutlet weak var ingredientLabel: UILabel!
     @IBOutlet weak var servingLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
-    
-    
+    @IBOutlet weak var instructionHeader: UILabel!
+    @IBOutlet weak var ingredientHeader: UILabel!
+    @IBOutlet weak var servingHeader: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         lookUpUsername()
         imageView.isHidden = false
         imagePicker.delegate = self
-        ingrediantLabel.isHidden = true
+        ingredientLabel.isHidden = true
         titleLabel!.isHidden = true
         servingLabel.isHidden = true
         instructionLabel.isHidden = true
-        
+        instructionHeader.isHidden = true
+        ingredientHeader.isHidden = true
+        servingHeader.isHidden = true
     }
     
     @IBAction func takeImage(_ sender: UIButton) {
@@ -157,10 +160,13 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     self.instructionLabel.isHidden = false
                     self.servingLabel.isHidden = false
                     self.servingLabel.text = "\(data[2])"
-                    self.ingrediantLabel.isHidden = false
+                    self.ingredientLabel.isHidden = false
                     self.instructionLabel.text = "\(data[4])"
                     self.generateBtn.isHidden = true
                     self.cameraBtn.isHidden = true
+                    self.instructionHeader.isHidden = false
+                    self.ingredientHeader.isHidden = false
+                    self.servingHeader.isHidden = false
                     //self.ingrediantLabel.isHidden = false
                     //self.ingrediantLabel.text = "\(data[3])"
                     //print(data[3][0]) // Hello
@@ -168,8 +174,8 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     for n in 0...data.count{
                         ingLabel = ingLabel + "\(data[3][n])" + "\n"
                     }
-                    self.ingrediantLabel.text = ingLabel
-                    print(self.ingrediantLabel.text)
+                    self.ingredientLabel.text = ingLabel
+                    print(self.ingredientLabel.text)
                     
                 }
                 catch{
