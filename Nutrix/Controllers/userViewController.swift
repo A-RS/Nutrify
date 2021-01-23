@@ -12,12 +12,15 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 
-class userViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class userViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIScrollViewDelegate{
     let db = Firestore.firestore()
     
     var email: String!
     var username: String!
     
+    @IBOutlet weak var generateBtn: UIButton!
+    
+    @IBOutlet weak var cameraBtn: UIButton!
     
     var foodItems: [String] = ["banana", "Apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
     
@@ -32,8 +35,10 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var inString: String! = ""
     
     
+    
+    
     @IBOutlet weak var ingrediantLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel?
     @IBOutlet weak var servingLabel: UILabel!
     @IBOutlet weak var instructionLabel: UILabel!
     
@@ -44,7 +49,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageView.isHidden = false
         imagePicker.delegate = self
         ingrediantLabel.isHidden = true
-        titleLabel.isHidden = true
+        titleLabel!.isHidden = true
         servingLabel.isHidden = true
         instructionLabel.isHidden = true
     }
@@ -147,6 +152,25 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     let data = try JSON(data: json)
                     print(data)
                     let convertedString = String(data: response.data!, encoding: String.Encoding.utf8)
+                    self.titleLabel?.isHidden = false
+                    self.titleLabel?.text = "\(data[0])"
+                    self.instructionLabel.isHidden = false
+                    self.servingLabel.isHidden = false
+                    self.servingLabel.text = "\(data[2])"
+                    self.ingrediantLabel.isHidden = false
+                    self.instructionLabel.text = "\(data[4])"
+                    self.generateBtn.isHidden = true
+                    self.cameraBtn.isHidden = true
+                    //self.ingrediantLabel.isHidden = false
+                    //self.ingrediantLabel.text = "\(data[3])"
+                    //print(data[3][0]) // Hello
+                    var ingLabel = ""
+                    for n in 0...data.count{
+                        ingLabel = ingLabel + "\(data[3][n])" + "\n"
+                    }
+                    self.ingrediantLabel.text = ingLabel
+                    print(self.ingrediantLabel.text)
+                    
                 }
                 catch{
                     print("JSON Error")
