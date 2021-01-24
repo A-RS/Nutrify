@@ -95,7 +95,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func didTapCheckBtn() {
         //print("hi")
         userFoodSaved = userFoodSaved + 1
-        print(userFoodSaved)
+        print(userFoodSaved!)
     }
 }   
 

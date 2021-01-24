@@ -15,16 +15,26 @@ class foodLabel: UITableViewCell{
     @IBOutlet weak var ingredientField: UILabel!
     var delegate: checkButtonDelagate?
     
+    @IBOutlet weak var checkMark: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
+
     @IBAction func checkBtn(_ sender: UIButton) {
         delegate?.didTapCheckBtn()
-        print("i am there")
+        checkMark.isEnabled = false
+        checkMark.alpha = 0.5
+        
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        
     }
     
     @IBAction func xBtn(_ sender: UIButton) {
         
     }
+
 }

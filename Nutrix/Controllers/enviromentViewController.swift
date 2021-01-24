@@ -18,7 +18,7 @@ class enviromentViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(ingredients.count)
-        foodSavedLabel.text = "\(userFoodSaved)" + "/" + "\(ingredients.count)"
+        foodSavedLabel.text = "\(userFoodSaved!)" + "/" + "\(ingredients.count)"
     }
     
     
