@@ -1,0 +1,27 @@
+[
+  {
+    "libraryIdentifier" : "c5d21280295afd0708e00f7320c2b70f",
+    "format" : "model",
+    "displayName" : "Wooden_Table.usdz"
+  },
+  {
+    "libraryIdentifier" : "1bf760f4fff64a45796d22ffda6a5138",
+    "format" : "model",
+    "displayName" : "Meat_Cleaver.usdz"
+  },
+  {
+    "libraryIdentifier" : "487aff9e50b76dc5b3b25c7e5c2b5276",
+    "format" : "model",
+    "displayName" : "Day11-Meat.usdz"
+  },
+  {
+    "libraryIdentifier" : "c29f249c9eb27405cf73551d2f842463",
+    "format" : "model",
+    "displayName" : "Salmon.usdz"
+  },
+  {
+    "libraryIdentifier" : "d3c9302315c057afa2833a16580dd493",
+    "format" : "model",
+    "displayName" : "Cabbage.usdz"
+  }
+]

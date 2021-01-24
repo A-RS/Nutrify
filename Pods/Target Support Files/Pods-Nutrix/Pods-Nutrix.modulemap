@@ -1,0 +1,6 @@
+framework module Pods_Nutrix {
+  umbrella header "Pods-Nutrix-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -18,10 +18,12 @@
 		14BEB78925AD541A00CFB3FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */; };
 		14BEB78C25AD569300CFB3FF /* userViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14BEB78B25AD569300CFB3FF /* userViewController.swift */; };
 		4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300925AD237500AD57BF /* AppDelegate.swift */; };
-		4B25300C25AD237500AD57BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300B25AD237500AD57BF /* ViewController.swift */; };
-		4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300D25AD237500AD57BF /* Experience.rcproject */; };
+		4B25300C25AD237500AD57BF /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300B25AD237500AD57BF /* ARViewController.swift */; };
+		4B25300E25AD237500AD57BF /* ARExperience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300D25AD237500AD57BF /* ARExperience.rcproject */; };
 		4B25301125AD237500AD57BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25300F25AD237500AD57BF /* Main.storyboard */; };
 		4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301425AD237700AD57BF /* LaunchScreen.storyboard */; };
+		4B8AA9AC25BD843900E78886 /* HandGestureProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8AA9AB25BD843900E78886 /* HandGestureProcessor.swift */; };
+		4B8AA9B125BDC6B700E78886 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B8AA9B025BDC6B700E78886 /* placeholder.jpg */; };
 		54C6C477D4F1A0EA5639207D /* Pods_Nutrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,11 +42,14 @@
 		1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300625AD237500AD57BF /* Nutrix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B25300925AD237500AD57BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B25300B25AD237500AD57BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4B25300D25AD237500AD57BF /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		4B25300B25AD237500AD57BF /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		4B25300D25AD237500AD57BF /* ARExperience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = ARExperience.rcproject; sourceTree = "<group>"; };
 		4B25301025AD237500AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B25301525AD237700AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B25301725AD237700AD57BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B8AA9AB25BD843900E78886 /* HandGestureProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandGestureProcessor.swift; sourceTree = "<group>"; };
+		4B8AA9AE25BD844B00E78886 /* HandPose.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HandPose.entitlements; sourceTree = "<group>"; };
+		4B8AA9B025BDC6B700E78886 /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 		B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.release.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,14 +77,12 @@
 		14BEB72925AD301300CFB3FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B25300B25AD237500AD57BF /* ViewController.swift */,
+				4B25300B25AD237500AD57BF /* ARViewController.swift */,
 				14BEB72325AD2FA700CFB3FF /* loginViewController.swift */,
 				14BEB71F25AD2A6000CFB3FF /* homeViewController.swift */,
 				14BEB72625AD2FB600CFB3FF /* registerViewController.swift */,
 				14BEB78B25AD569300CFB3FF /* userViewController.swift */,
 				14851A6725B660DC001E9334 /* cookingViewController.swift */,
-				14851A7A25B68516001E9334 /* foodLabel.swift */,
-				14851A7025B67D1F001E9334 /* foodLabel.xib */,
 				14851A6A25B660F3001E9334 /* enviromentViewController.swift */,
 			);
 			path = Controllers;
@@ -107,15 +110,36 @@
 			isa = PBXGroup;
 			children = (
 				4B25300925AD237500AD57BF /* AppDelegate.swift */,
-				4B25300D25AD237500AD57BF /* Experience.rcproject */,
-				4B25300F25AD237500AD57BF /* Main.storyboard */,
+				4B25300D25AD237500AD57BF /* ARExperience.rcproject */,
 				14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */,
 				145455D525BCD729005ECDB6 /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
+				4B8AA9AB25BD843900E78886 /* HandGestureProcessor.swift */,
+				4B8AA9B025BDC6B700E78886 /* placeholder.jpg */,
 				4B25301725AD237700AD57BF /* Info.plist */,
+				4B8AA9AE25BD844B00E78886 /* HandPose.entitlements */,
+				4B8AA9A525BD543900E78886 /* Views */,
+				4B8AA9A725BD546F00E78886 /* Models */,
 				14BEB72925AD301300CFB3FF /* Controllers */,
 			);
 			path = Nutrix;
+			sourceTree = "<group>";
+		};
+		4B8AA9A525BD543900E78886 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14851A7025B67D1F001E9334 /* foodLabel.xib */,
+				4B25300F25AD237500AD57BF /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4B8AA9A725BD546F00E78886 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14851A7A25B68516001E9334 /* foodLabel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6BE338D0593C883E97672200 /* Frameworks */ = {
@@ -187,6 +211,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */,
+				4B8AA9B125BDC6B700E78886 /* placeholder.jpg in Resources */,
 				14BEB78925AD541A00CFB3FF /* GoogleService-Info.plist in Resources */,
 				14851A7125B67D1F001E9334 /* foodLabel.xib in Resources */,
 				4B25301125AD237500AD57BF /* Main.storyboard in Resources */,
@@ -260,13 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B25300C25AD237500AD57BF /* ViewController.swift in Sources */,
+				4B25300C25AD237500AD57BF /* ARViewController.swift in Sources */,
 				4B25300A25AD237500AD57BF /* AppDelegate.swift in Sources */,
 				14851A7B25B68516001E9334 /* foodLabel.swift in Sources */,
 				14BEB78C25AD569300CFB3FF /* userViewController.swift in Sources */,
-				4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */,
+				4B25300E25AD237500AD57BF /* ARExperience.rcproject in Sources */,
 				14BEB72725AD2FB600CFB3FF /* registerViewController.swift in Sources */,
 				14BEB72025AD2A6000CFB3FF /* homeViewController.swift in Sources */,
+				4B8AA9AC25BD843900E78886 /* HandGestureProcessor.swift in Sources */,
 				14BEB72425AD2FA700CFB3FF /* loginViewController.swift in Sources */,
 				14851A6825B660DC001E9334 /* cookingViewController.swift in Sources */,
 				14851A6B25B660F3001E9334 /* enviromentViewController.swift in Sources */,

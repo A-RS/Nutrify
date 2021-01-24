@@ -18,6 +18,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     var currentCell: foodLabel!
     var foodItemSaved: String! = ""
     var foodItem1: String!
+    var foodURL: String!
     
     var userFoodSaved: Int! = 0
     
@@ -59,6 +60,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let uvHome = segue.destination as? userViewController{
             uvHome.email = self.email
             uvHome.username = self.username
+            uvHome.foodURL = self.foodURL
         }
         else if let uvEnv = segue.destination as? enviromentViewController{
             uvEnv.email = self.email
@@ -66,6 +68,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
             uvEnv.ingredients = self.ingredients
             uvEnv.userFoodSaved = self.userFoodSaved
             uvEnv.foodItemSaved = self.foodItemSaved
+            uvEnv.foodURL = self.foodURL
         }
         
     }

@@ -12,6 +12,8 @@ class enviromentViewController: UIViewController{
     var ingredients: [String] = []
     var userFoodSaved: Int!
     var foodItemSaved: String!
+    
+    var foodURL: String!
 
                                                           
     @IBOutlet weak var fooditemsavedLabel: UILabel!
@@ -42,12 +44,25 @@ class enviromentViewController: UIViewController{
             uvCooking.email = self.email
             uvCooking.username = self.username
         }
-        else if let uvHome = segue.destination as? userViewController{
+        if let uvHome = segue.destination as? userViewController{
             uvHome.email = self.email
             uvHome.username = self.username
         }
+        if let secondViewController = segue.destination as? UINavigationController {
+            let arViewController = secondViewController.topViewController as! ARViewController
+            arViewController.email = email
+            arViewController.username = username
+            arViewController.foodItemSaved = foodItemSaved
+            arViewController.userFoodSaved = userFoodSaved
+            arViewController.foodURL = foodURL
+        }
         
     }
+    
+    @IBAction func segueToAR(_ sender: UIButton) {
+        performSegue(withIdentifier: "envToAR", sender: self)
+    }
+    
 }
 
 

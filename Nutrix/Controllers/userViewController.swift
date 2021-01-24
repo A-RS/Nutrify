@@ -38,6 +38,8 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     var foodArray: [String] = []
     
+    var foodURL: String! = ""
+    
     
     @IBOutlet weak var ingLabel: UIButton!
     @IBOutlet weak var intrLabel: UIButton!
@@ -177,6 +179,8 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     self.servings = "\(data[2])"
                     self.instructions = "\(data[4])"
                     
+                    self.foodURL = "\(data[5])"
+                    
                     self.intrLabel.isHidden = false
                     self.ingLabel.isHidden = false
                     self.servLabel.isHidden = false
@@ -248,6 +252,7 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         if let uvCooking = segue.destination as? cookingViewController{
             uvCooking.email = self.email
             uvCooking.username = self.username
+            uvCooking.foodURL = self.foodURL
         }
         else if let uvEnv = segue.destination as? enviromentViewController{
             uvEnv.email = self.email
