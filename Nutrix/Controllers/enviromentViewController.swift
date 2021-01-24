@@ -5,14 +5,20 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 
-class enviromentViewController: UIViewController {
+class enviromentViewController: UIViewController{
     
     var email: String!
     var username: String!
+    var ingredients: [String] = []
+    var userFoodSaved: Int!
+
+    
+    @IBOutlet weak var foodSavedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //print(ingredients.count)
+        foodSavedLabel.text = "\(userFoodSaved)" + "/" + "\(ingredients.count)"
     }
     
     

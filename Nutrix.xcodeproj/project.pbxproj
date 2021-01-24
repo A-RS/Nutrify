@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		145455D625BCD72A005ECDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 145455D525BCD729005ECDB6 /* Assets.xcassets */; };
 		14851A6825B660DC001E9334 /* cookingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14851A6725B660DC001E9334 /* cookingViewController.swift */; };
 		14851A6B25B660F3001E9334 /* enviromentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14851A6A25B660F3001E9334 /* enviromentViewController.swift */; };
 		14851A7125B67D1F001E9334 /* foodLabel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14851A7025B67D1F001E9334 /* foodLabel.xib */; };
@@ -20,13 +21,13 @@
 		4B25300C25AD237500AD57BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300B25AD237500AD57BF /* ViewController.swift */; };
 		4B25300E25AD237500AD57BF /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 4B25300D25AD237500AD57BF /* Experience.rcproject */; };
 		4B25301125AD237500AD57BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25300F25AD237500AD57BF /* Main.storyboard */; };
-		4B25301325AD237700AD57BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301225AD237700AD57BF /* Assets.xcassets */; };
 		4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B25301425AD237700AD57BF /* LaunchScreen.storyboard */; };
 		54C6C477D4F1A0EA5639207D /* Pods_Nutrix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F4EF25E172A90C948C4C223 /* Pods_Nutrix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12D8B4E760A6C2C05DB6C0CE /* Pods-Nutrix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.debug.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.debug.xcconfig"; sourceTree = "<group>"; };
+		145455D525BCD729005ECDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14851A6725B660DC001E9334 /* cookingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cookingViewController.swift; sourceTree = "<group>"; };
 		14851A6A25B660F3001E9334 /* enviromentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = enviromentViewController.swift; sourceTree = "<group>"; };
 		14851A7025B67D1F001E9334 /* foodLabel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = foodLabel.xib; sourceTree = "<group>"; };
@@ -42,7 +43,6 @@
 		4B25300B25AD237500AD57BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4B25300D25AD237500AD57BF /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		4B25301025AD237500AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4B25301225AD237700AD57BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B25301525AD237700AD57BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B25301725AD237700AD57BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4BCBBD4B88E7B3200651D86 /* Pods-Nutrix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrix.release.xcconfig"; path = "Target Support Files/Pods-Nutrix/Pods-Nutrix.release.xcconfig"; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 				4B25300D25AD237500AD57BF /* Experience.rcproject */,
 				4B25300F25AD237500AD57BF /* Main.storyboard */,
 				14BEB78825AD541A00CFB3FF /* GoogleService-Info.plist */,
-				4B25301225AD237700AD57BF /* Assets.xcassets */,
+				145455D525BCD729005ECDB6 /* Assets.xcassets */,
 				4B25301425AD237700AD57BF /* LaunchScreen.storyboard */,
 				4B25301725AD237700AD57BF /* Info.plist */,
 				14BEB72925AD301300CFB3FF /* Controllers */,
@@ -189,8 +189,8 @@
 				4B25301625AD237700AD57BF /* LaunchScreen.storyboard in Resources */,
 				14BEB78925AD541A00CFB3FF /* GoogleService-Info.plist in Resources */,
 				14851A7125B67D1F001E9334 /* foodLabel.xib in Resources */,
-				4B25301325AD237700AD57BF /* Assets.xcassets in Resources */,
 				4B25301125AD237500AD57BF /* Main.storyboard in Resources */,
+				145455D625BCD72A005ECDB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,13 +418,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -438,13 +438,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = A9H3ZUZBG6;
+				DEVELOPMENT_TEAM = 9HD8W566RB;
 				INFOPLIST_FILE = Nutrix/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.XuAutomation.Nutrix;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AnanyaAutomation.Nutrix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

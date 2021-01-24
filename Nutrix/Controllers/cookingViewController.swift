@@ -5,7 +5,7 @@ import AuthenticationServices
 import Alamofire
 import SwiftyJSON
 
-class cookingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class cookingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, checkButtonDelagate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count
     }
@@ -16,6 +16,8 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var ingredients: [String] = []
     var currentCell: foodLabel!
+    
+    var userFoodSaved: Int! = 0
     
     let db = Firestore.firestore()
     
@@ -30,6 +32,8 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         foodTable.register(UINib(nibName: "foodLabel", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         lookUpInfo()
+        //didTapCheckBtn()
+        //print(ingredients.count)
     }
     
     @IBAction func homeAction(_ sender: UIButton) {
@@ -49,6 +53,8 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         else if let uvEnv = segue.destination as? enviromentViewController{
             uvEnv.email = self.email
             uvEnv.username = self.username
+            uvEnv.ingredients = self.ingredients
+            uvEnv.userFoodSaved = self.userFoodSaved
         }
         
     }
@@ -81,8 +87,15 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         currentCell = foodTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? foodLabel
         
         currentCell.ingredientField.text = "\(foodItem)"
+        currentCell.delegate = self
         
         return currentCell
     }
-}
+    
+    func didTapCheckBtn() {
+        //print("hi")
+        userFoodSaved = userFoodSaved + 1
+        print(userFoodSaved)
+    }
+}   
 

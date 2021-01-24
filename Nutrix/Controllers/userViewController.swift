@@ -36,6 +36,10 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     var servings: String!
     var instructions: String!
     
+    
+    @IBOutlet weak var ingLabel: UIButton!
+    @IBOutlet weak var intrLabel: UIButton!
+    @IBOutlet weak var servLabel: UIButton!
     @IBOutlet weak var titleLabel: UILabel?
     
     @IBOutlet weak var imageView: UIImageView!
@@ -46,7 +50,13 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
         imageView.isHidden = false
         imagePicker.delegate = self
         titleLabel!.isHidden = true
+        ingLabel.isHidden = true
+        intrLabel.isHidden = true
+        servLabel.isHidden = true
         
+        ingLabel.layer.cornerRadius = 30
+        intrLabel.layer.cornerRadius = 30
+        servLabel.layer.cornerRadius = 30
     }
     
     @IBAction func takeImage(_ sender: UIButton) {
@@ -165,7 +175,9 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
                     self.servings = "\(data[2])"
                     self.instructions = "\(data[4])"
                     
-                    
+                    self.intrLabel.isHidden = false
+                    self.ingLabel.isHidden = false
+                    self.servLabel.isHidden = false
                 }
                 catch{
                     print("JSON Error")
