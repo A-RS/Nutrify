@@ -16,14 +16,18 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var ingredients: [String] = []
     var currentCell: foodLabel!
-    var foodItemSaved: String!
+    var foodItemSaved: String! = ""
     var foodItem1: String!
     
     var userFoodSaved: Int! = 0
     
+    var selectedCells: [foodLabel] = []
+    
     var fruitArray: [String] = ["Apple", "Banana", "Orange", "Pear", "Strawberry", "Blueberry", "Raspberry", "Blackberry", "Tomatoe", "Watermelloon", "Pinapple"]
     var grainsArray: [String] = ["Bread", "Cereal", "Pasta", "Rice"]
-    var meat: [String] = ["Beef", "Bacon", "Pig", "Cow", "Lamb", "Mutton", "Pork", "Fish", "Chicken"]
+    var meat: [String] = ["Beef", "Bacon", "Pig", "Cow", "Lamb", "Mutton", "Pork", "Fish", "Chicken", "Laptop part", "Computer"]
+    
+    
     
     let db = Firestore.firestore()
     
@@ -88,6 +92,22 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Unselect the row, and instead, show the state with a checkmark.
+        tableView.deselectRow(at: indexPath, animated: false)
+//
+//        guard let cellSelected = foodTable.cellForRow(at: indexPath) as? foodLabel else { return }
+//
+//
+//        // append the selected cell to the selection list
+//        selectedCells.append(cellSelected)
+        
+        // Update the selected item to indicate whether the user packed it or not.
+        let item = ingredients[indexPath.row]
+        foodItem1 = item
+        
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         print(ingredients)
         let foodItem = ingredients[indexPath.row]
@@ -101,11 +121,22 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func didTapCheckBtn() {
-        //print("hi")
         userFoodSaved = userFoodSaved + 1
         for i in fruitArray{
             if i == foodItem1{
-                foodItemSaved = "\n" + i
+                foodItemSaved = foodItemSaved + i + ": 3,000 grams of CO2" + "\n"
+                break
+            }
+        }
+        for i in grainsArray{
+            if i == foodItem1{
+                foodItemSaved = foodItemSaved + i + ": 1,000 grams of CO2" + "\n"
+                break
+            }
+        }
+        for i in meat{
+            if i == foodItem1{
+                foodItemSaved = foodItemSaved + i + ": 14,000 grams of CO2" + "\n"
                 break
             }
         }
