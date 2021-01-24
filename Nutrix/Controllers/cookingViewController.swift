@@ -20,6 +20,8 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     var foodItem1: String!
     var foodURL: String!
     
+    var ingredientsCount: Int! = 0
+    
     var userFoodSaved: Int! = 0
     
     var selectedCells: [foodLabel] = []
@@ -69,6 +71,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
             uvEnv.userFoodSaved = self.userFoodSaved
             uvEnv.foodItemSaved = self.foodItemSaved
             uvEnv.foodURL = self.foodURL
+            uvEnv.ingredientsCount = self.ingredientsCount
         }
         
     }
@@ -128,18 +131,21 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
         for i in fruitArray{
             if i == foodItem1{
                 foodItemSaved = foodItemSaved + i + ": 3,000 grams of CO2" + "\n"
+                ingredientsCount += 1
                 break
             }
         }
         for i in grainsArray{
             if i == foodItem1{
                 foodItemSaved = foodItemSaved + i + ": 1,000 grams of CO2" + "\n"
+                ingredientsCount += 1
                 break
             }
         }
         for i in meat{
             if i == foodItem1{
                 foodItemSaved = foodItemSaved + i + ": 14,000 grams of CO2" + "\n"
+                ingredientsCount += 1
                 break
             }
         }

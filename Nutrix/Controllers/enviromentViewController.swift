@@ -12,6 +12,7 @@ class enviromentViewController: UIViewController{
     var ingredients: [String] = []
     var userFoodSaved: Int!
     var foodItemSaved: String!
+    var ingredientsCount: Int!
     
     var foodURL: String!
 
@@ -55,6 +56,7 @@ class enviromentViewController: UIViewController{
             arViewController.foodItemSaved = foodItemSaved
             arViewController.userFoodSaved = userFoodSaved
             arViewController.foodURL = foodURL
+            arViewController.ingredientsCount = ingredientsCount
         }
         
     }

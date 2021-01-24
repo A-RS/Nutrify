@@ -16,13 +16,20 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
     var username: String!
     var userFoodSaved: Int!
     var foodItemSaved: String!
+    var ingredientsCount: Int!
     
+    // loop counter for hand pose optimization
     var counter: Int! = 0
     
     var foodURL: String! = ""
     
     
     var configuration = ARWorldTrackingConfiguration()
+    
+    var tree: Entity!
+    var statsBar: Entity!
+    var statsText: Entity!
+    var recipeText: Entity!
     
     private var gestureProcessor = HandGestureProcessor()
     private let videoDataOutputQueue = DispatchQueue(label: "CameraFeedDataOutput")
@@ -89,7 +96,42 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
         // rotate the image 90 degrees so it faces the user
         imageAnchor.transform.rotation = simd_quatf(angle: .pi/2, axis: SIMD3(x: 1, y: 0, z: 0))
         
+        tree = arAnchor.findEntity(named: "tree")
+        statsBar = arAnchor.findEntity(named: "statsBar")
+        statsText = arAnchor.findEntity(named: "carbonText")
+        recipeText = arAnchor.findEntity(named: "recipeText")
         
+        for i in 1...ingredientsCount {
+            let tree_ = tree.clone(recursive: true)
+            arAnchor.addChild(tree_)
+            tree_.transform.translation = [Float(i) * 0.1, 0, -0.5]
+            let statsBar_ = statsBar.clone(recursive: true)
+            arAnchor.addChild(statsBar_)
+            statsBar_.transform.translation = [0.5,  Float(i) * 0.05, -0.5]
+            
+        }
+        
+        arAnchor.addChild(statsText)
+        arAnchor.addChild(recipeText)
+        statsText.transform.translation = [0.5,  0.30, -0.5]
+        recipeText.transform.translation = [0, 0.35, -0.5]
+        
+        //print(statsText.components.self)
+        
+//        var textModelComp: ModelComponent = (statsText.components.self[ModelComponent])!
+//
+//        var material = SimpleMaterial()
+//        material.baseColor = .color(.red)
+//        textModelComp.materials[0] = material
+//
+//        textModelComp.mesh = .generateText("Your Carbon Stats",
+//            extrusionDepth: 0.01,
+//                      font: .systemFont(ofSize: 0.08),
+//            containerFrame: CGRect(),
+//                 alignment: .left,
+//             lineBreakMode: .byCharWrapping)
+//
+//        statsText.components.set(textModelComp)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -188,6 +230,7 @@ class ARViewController: UIViewController, ARSessionDelegate, UNUserNotificationC
                 }
                 
                 let indexFingerAndThumbTipDistance = abs(thumbTipPoint.location.x - indexTipPoint.location.x) + abs(thumbTipPoint.location.y - indexTipPoint.location.y)
+                
                 
                 print(indexFingerAndThumbTipDistance)
                 
