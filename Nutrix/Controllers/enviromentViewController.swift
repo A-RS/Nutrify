@@ -11,14 +11,19 @@ class enviromentViewController: UIViewController{
     var username: String!
     var ingredients: [String] = []
     var userFoodSaved: Int!
+    var foodItemSaved: String!
 
-    
+                                                          
+    @IBOutlet weak var fooditemsavedLabel: UILabel!
     @IBOutlet weak var foodSavedLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(ingredients.count)
-        foodSavedLabel.text = "\(userFoodSaved!)" + "/" + "\(ingredients.count)"
+        fooditemsavedLabel.isHidden = false
+        foodSavedLabel.text = "\(userFoodSaved!)" + "/" + "\(ingredients.count)" + " | " + "\(Float(userFoodSaved!)/Float((ingredients.count))*100)" + "%"
+        fooditemsavedLabel.text = foodItemSaved!
+        //print(fooditemsavedLabel.text!)
     }
     
     

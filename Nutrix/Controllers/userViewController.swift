@@ -22,19 +22,21 @@ class userViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     @IBOutlet weak var cameraBtn: UIButton!
     
-    var foodItems: [String] = ["banana", "Apple", "bread", "pasta", "Touchpad", "Computer", "Laptop part"]
+    var foodItems: [String] = ["Apple", "Banana", "Orange", "Pear", "Strawberry", "Blueberry", "Raspberry", "Blackberry", "Tomatoe", "Watermelloon", "Pinapple", "Bread", "Cereal", "Pasta", "Rice", "Beef", "Bacon", "Pig", "Cow", "Lamb", "Mutton", "Pork", "Fish", "Chicken"]
     
     @IBOutlet weak var foodLabels: UILabel!
     
     var imagePicker = UIImagePickerController()
     
-    var imageTaken: UIImage!
+    var imageTaken: UIImage! 
     
     var inString: String! = ""
     
     var ingredients: String!
     var servings: String!
     var instructions: String!
+    
+    var foodArray: [String] = []
     
     
     @IBOutlet weak var ingLabel: UIButton!

@@ -16,8 +16,14 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var ingredients: [String] = []
     var currentCell: foodLabel!
+    var foodItemSaved: String!
+    var foodItem1: String!
     
     var userFoodSaved: Int! = 0
+    
+    var fruitArray: [String] = ["Apple", "Banana", "Orange", "Pear", "Strawberry", "Blueberry", "Raspberry", "Blackberry", "Tomatoe", "Watermelloon", "Pinapple"]
+    var grainsArray: [String] = ["Bread", "Cereal", "Pasta", "Rice"]
+    var meat: [String] = ["Beef", "Bacon", "Pig", "Cow", "Lamb", "Mutton", "Pork", "Fish", "Chicken"]
     
     let db = Firestore.firestore()
     
@@ -55,6 +61,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
             uvEnv.username = self.username
             uvEnv.ingredients = self.ingredients
             uvEnv.userFoodSaved = self.userFoodSaved
+            uvEnv.foodItemSaved = self.foodItemSaved
         }
         
     }
@@ -84,6 +91,7 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         print(ingredients)
         let foodItem = ingredients[indexPath.row]
+        self.foodItem1 = foodItem
         currentCell = foodTable.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as? foodLabel
         
         currentCell.ingredientField.text = "\(foodItem)"
@@ -95,6 +103,12 @@ class cookingViewController: UIViewController, UITableViewDelegate, UITableViewD
     func didTapCheckBtn() {
         //print("hi")
         userFoodSaved = userFoodSaved + 1
+        for i in fruitArray{
+            if i == foodItem1{
+                foodItemSaved = "\n" + i
+                break
+            }
+        }
         print(userFoodSaved!)
     }
 }   
